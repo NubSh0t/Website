@@ -1,0 +1,45 @@
+﻿@page
+@model SignupModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Sign Up</h2>
+        <form asp-action="Signup" asp-controller="Account" method="post">
+            <div class="input-group">
+                <label asp-for="FullName">Full Name</label>
+                <input asp-for="FullName" placeholder="Enter your full name" required>
+                <span asp-validation-for="FullName" class="error-message"></span>
+            </div>
+            <div class="input-group">
+                <label asp-for="Email">Email</label>
+                <input asp-for="Email" placeholder="Enter your email" required>
+                <span asp-validation-for="Email" class="error-message"></span>
+            </div>
+            <div class="input-group">
+                <label asp-for="Password">Password</label>
+                <input asp-for="Password" type="password" placeholder="Enter your password" required>
+                <span asp-validation-for="Password" class="error-message"></span>
+            </div>
+            <div class="input-group">
+                <label asp-for="ConfirmPassword">Confirm Password</label>
+                <input asp-for="ConfirmPassword" type="password" placeholder="Confirm your password" required>
+                <span asp-validation-for="ConfirmPassword" class="error-message"></span>
+            </div>
+            <button type="submit" class="login-btn">Sign Up</button>
+            <p>Already have an account? <a href="Login">Log In</a></p>
+            @if (!string.IsNullOrEmpty(Model.Message))
+            {
+            <p>@Model.Message</p>
+            }
+        </form>
+    </div>
+</body>
+</html>

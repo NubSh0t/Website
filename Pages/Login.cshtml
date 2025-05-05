@@ -1,0 +1,28 @@
+﻿@page
+@model LoginModel
+
+<!-- Modal -->
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form asp-action="Login" asp-controller="Account" method="post">
+            <div class="input-group">
+                <label asp-for="Email">Email</label>
+                <input asp-for="Email" placeholder="Enter your email" required>
+                <span asp-validation-for="Email" class="error-message"></span>
+            </div>
+            <div class="input-group">
+                <label asp-for="Password">Password</label>
+                <input asp-for="Password" type="password" placeholder="Enter your password" required>
+                <span asp-validation-for="Password" class="error-message"></span>
+            </div>
+            <button type="submit" class="login-btn">Log In</button>
+            <a href="#" class="forgot-password">Forgot password?</a>
+            <p>Don't have an account? <a href="Signup">Sign up</a></p>
+            @if (!string.IsNullOrEmpty(Model.Message))
+            {
+            <p>@Model.Message</p>
+            }
+        </form>
+    </div>
+</body>
