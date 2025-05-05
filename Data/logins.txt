@@ -1,1 +1,1 @@
-FullName: Ammar Ahmed, Email: 1ammarahmed23@gmail.com, Password: 1ammar23
+FullName: admin, Email: admin@gmail.com, Password: admin123

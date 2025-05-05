@@ -10,9 +10,11 @@ public class AccountModel : PageModel
 {
     private readonly ILogger<AccountModel> _logger;
     [BindProperty]
-    public string Email { get; set; }="";
+    public string Id { get; set; }="";
     [BindProperty]
-    public string Password { get; set; }="";
+    public string Mon { get; set; }="";
+
+    public bool b=false;
 
     public string Message { get; set; } = "";
 
@@ -21,37 +23,37 @@ public class AccountModel : PageModel
         _logger = logger;
     }
 
-    public IActionResult OnPost()
+    public void OnPost()
     {
-        string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "logins.txt");
+        b=false;
+        string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "cards.txt");
 
         if (!System.IO.File.Exists(filePath))
         {
             Message = "User database not found.";
-            return Page();;
+            return;
         }
 
         var lines = System.IO.File.ReadAllLines(filePath);
 
         foreach (var line in lines)
         {
-            // Sample format: FullName: Ammar Ahmed, Email: 1ammarahmed23@gmail.com, Password: 1ammar23
+
             var parts = line.Split(',');
 
-            if (parts.Length < 3) continue;
+            var code = parts[0];
+            var money = parts[1];
 
-            var emailPart = parts[1].Trim().Replace("Email: ", "");
-            var passwordPart = parts[2].Trim().Replace("Password: ", "");
+            Mon=money;
 
-            if (Email == emailPart && Password == passwordPart)
+            if (code==Id)
             {
-                Message = "Login successful!";
-                return RedirectToPage("/Account");;
+                b=true;
+                return;
             }
         }
 
-        Message = "Invalid email or password.";
-        return Page();
+        Message = "Card is not in the database";
     }
 
     public void OnGet()

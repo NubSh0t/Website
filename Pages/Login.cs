@@ -46,7 +46,7 @@ public class LoginModel : PageModel
             if (Email == emailPart && Password == passwordPart)
             {
                 Message = "Login successful!";
-                return RedirectToPage("/Account");;
+                return RedirectToPage("/Account");
             }
         }
 
