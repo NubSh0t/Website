@@ -53,7 +53,12 @@ public class AccountModel : PageModel
             }
         }
 
-        Message = "Card is not in the database";
+        if (b==false){
+            string line = $"{Id},0";
+            System.IO.File.AppendAllText(filePath, line + Environment.NewLine);
+        }
+
+        Message = "Card is not in the database, registering right now";
     }
 
     public void OnGet()
