@@ -27,13 +27,14 @@ public class AccountModel : PageModel
     {
         b=false;
         string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "cards.txt");
+        string[] lines;
 
         if (!System.IO.File.Exists(filePath))
         {
             Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
-            var lines = System.IO.File.ReadAllLines(filePath);
+            lines = System.IO.File.ReadAllLines(filePath);
         }else{
-            var lines = System.IO.File.ReadAllLines(filePath);
+            lines = System.IO.File.ReadAllLines(filePath);
         }
 
 
