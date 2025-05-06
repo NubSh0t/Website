@@ -31,9 +31,11 @@ public class AccountModel : PageModel
         if (!System.IO.File.Exists(filePath))
         {
             Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
+            var lines = System.IO.File.ReadAllLines(filePath);
+        }else{
+            var lines = System.IO.File.ReadAllLines(filePath);
         }
 
-        var lines = System.IO.File.ReadAllLines(filePath);
 
         foreach (var line in lines)
         {
