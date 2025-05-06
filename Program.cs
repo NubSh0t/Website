@@ -1,3 +1,12 @@
+using System.IO;
+using System;
+
+
+string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "cards.txt");
+Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
+filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "logins.txt");
+Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
