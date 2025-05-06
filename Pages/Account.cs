@@ -30,8 +30,7 @@ public class AccountModel : PageModel
 
         if (!System.IO.File.Exists(filePath))
         {
-            Message = "User database not found.";
-            return;
+            Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
         }
 
         var lines = System.IO.File.ReadAllLines(filePath);
