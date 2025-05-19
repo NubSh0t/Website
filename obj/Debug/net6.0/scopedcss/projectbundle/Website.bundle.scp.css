@@ -47,3 +47,11 @@ button.accept-policy[b-y1m2c1ijh3] {
   white-space: nowrap;
   line-height: 60px;
 }
+
+.hover-shadow-lg:hover[b-y1m2c1ijh3] {
+        transform: translateY(-5px);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    }
+.transition-all[b-y1m2c1ijh3] {
+    transition: all 0.3s ease-in-out;
+}

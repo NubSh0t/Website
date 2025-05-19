@@ -1,12 +1,3 @@
-using System.IO;
-using System;
-
-
-string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "cards.txt");
-Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
-filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "logins.txt");
-Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,6 +6,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddSession();
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
