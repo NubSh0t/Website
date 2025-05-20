@@ -36,7 +36,7 @@
                     </div>
                     <div class="col-lg-6 mb-0 d-flex align-items-center">
                         <div class="text-align-left align-self-center">
-                            <h1 class="h1 text-success"><b>Pay</b>Tag</h1>
+                            <h1 class="h1 text-success"><span style="color: #ffffff;font-family: 'Poppins', sans-serif;font-size: 90px !important;font-weight: 200 !important;">pay</span><span style="color: #bb9d2b;font-family: 'Poppins', sans-serif;font-size: 90px !important;font-weight: 200 !important;">Tag</span></h1>
                             <h3 class="h2">The easiest way to earn from what you love sharing</h3>
                             <p class="lead">Turn your posts into profits. Tag brands, share your stories, and earn real cash rewards.</p>
                         </div>
@@ -95,7 +95,7 @@
 </section>
 
 <!-- Features Section -->
-<section class="py-5" style="background: linear-gradient(135deg, #efefef 0%, #efefef 100%);">
+<section class="py-5" style="background: linear-gradient(135deg, #000000 0%, #000000 100%);">
     <div class="container">
         <div class="row text-center mb-5">
             <div class="col">
@@ -155,29 +155,35 @@
 </section>
 
 <script>
-    function animateValue(id, start, end, duration, prefix = '') {
-        let obj = document.getElementById(id);
-        let range = end - start;
-        let current = start;
-        let increment = end > start ? 1 : -1;
-        let stepTime = Math.abs(Math.floor(duration / range));
-        let timer = setInterval(function () {
-            current += increment;
-            obj.innerText = prefix + current.toLocaleString();
-            if (current == end) clearInterval(timer);
-        }, stepTime);
+    function animateValue(id, start, end, time, prefix = '') {
+        const obj = document.getElementById(id);
+        const range = end - start;
+        const startTime = performance.now();
+
+        function step(currentTime) {
+            const progress = Math.min((currentTime - startTime) / time, 1);
+            const currentValue = Math.floor(start + range * progress);
+            obj.innerText = prefix + currentValue.toLocaleString();
+
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            }
+        }
+
+        requestAnimationFrame(step);
     }
 
+
     // Example values - replace with Razor variables if needed
-    animateValue("earnings", 0, 25400, 500, '$');
-    animateValue("influencers", 0, 980, 500);
-    animateValue("brands", 0, 56, 500);
+    animateValue("earnings", 0, 25400, 2000);
+    animateValue("influencers", 0, 980, 2000);
+    animateValue("brands", 0, 56, 2000);
 </script>
 
 
 
 <!-- FAQ Section -->
-<section class="py-5 bg-white">
+<section class="container py-5">
     <div class="container">
         <div class="row text-center mb-5">
             <div class="col">

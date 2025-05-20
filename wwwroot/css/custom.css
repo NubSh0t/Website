@@ -58,4 +58,31 @@
     text-decoration: underline;
 }
 
+.fas{
+    color: #bb9d2b;
+}
+
+.h5{
+    color: #000000;
+}
+
+.fw-semibold {
+    color:#000000;
+}
+
+.fa-map-marker-alt{
+    color:#ffffff;
+}
+
+.nav-icon{
+    color: #ffffff;
+}
+
+.navbar{
+    background-color: #000000;
+}
+
+.container{
+    background-color: #000000;
+}
 

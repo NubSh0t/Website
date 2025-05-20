@@ -33,16 +33,19 @@ body, ul, li, p, a, label, input, div {
   font-family: 'Roboto', sans-serif;
   font-size: 18px !important;
   font-weight: 300 !important;
+  color:#ffffff ;
 }
 .h1 {
   font-family: 'Roboto', sans-serif;
   font-size: 48px !important;
   font-weight: 200 !important;
+  color:  #bb9d2b ;
 }
 .h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 30px !important;
   font-weight: 300;
+  color:#ffffff ;
 }
 .h3 {
   font-family: 'Roboto', sans-serif;
@@ -52,12 +55,12 @@ body, ul, li, p, a, label, input, div {
 .logo { font-weight: 500 !important;}
 .text-warning {  color: #ede861 !important;}
 .text-muted { color: #bcbcbc !important;}
-.text-success { color: #6104c5 !important;}
+.text-success { color: #bb9d2b !important;}
 .text-light { color: #cfd6e1 !important;}
-.bg-dark { background-color: #212934 !important;}
-.bg-light { background-color: #e9eef5 !important;}
-.bg-black { background-color: #1d242d !important;}
-.bg-success { background-color: #6104c5 !important;}
+.bg-dark { background-color: #000000 !important;}
+.bg-light { background-color: #000000 !important;}
+.bg-black { background-color: #000000 !important;}
+.bg-success { background-color: #bb9d2b !important;}
 .btn-success {
   background-color: #6104c5 !important;
   border-color: #2b005f !important;
@@ -70,7 +73,7 @@ body, ul, li, p, a, label, input, div {
 /* Nav */
 #templatemo_nav_top { min-height: 40px;}
 #templatemo_nav_top * { font-size: .9em !important;}
-#templatemo_main_nav a { color: #212934;}
+#templatemo_main_nav a { color: #ffffff;}
 #templatemo_main_nav a:hover { color: #2b005f;}
 #templatemo_main_nav .navbar .nav-icon { margin-right: 20px;}
 
@@ -117,17 +120,17 @@ body, ul, li, p, a, label, input, div {
 /* Carousel Hero */
 #template-mo-zay-hero-carousel .carousel-indicators li {
   margin-top: -50px;
-  background-color: #6104c5;
+  background-color: #bb9d2b;
 }
 #template-mo-zay-hero-carousel .carousel-control-next i,
 #template-mo-zay-hero-carousel .carousel-control-prev i {
-  color: #6104c5 !important;
+  color: #bb9d2b !important;
   font-size: 2.8em !important;
 }
 /* Carousel Brand */
 .tempaltemo-carousel .h1 {
   font-size: .5em !important;
-  color: #000 !important;
+  color: #000000 !important;
 }
 /* Services */
 .services-icon-wap {transition: .3s;}
