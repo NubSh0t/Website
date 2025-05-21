@@ -1,0 +1,26 @@
+﻿@page
+@model AccountModel2
+
+
+<!-- Modal -->
+<body>
+    <div class="login-container">
+        <h2>Card Info</h2>
+        <div style="margin-top: 20px;">
+            <h3 style="color: #000000">Card Number: @Model.Cardnum</h3>
+            <h3 style="color: #000000">Total Amount: @Model.Money</h3>
+            <p>   </p>
+
+            <form method="post">
+            <button class="login-btn" type="submit" disabled>Deposit</button>
+            </form>
+
+            <p>   </p>
+
+            <form method="post">
+                <button class="login-btn" type="submit" disabled>Withdraw</button>
+            </form>
+        </div>
+        
+    </div>
+</body>

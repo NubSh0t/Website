@@ -5,38 +5,18 @@
 <!-- Modal -->
 <body>
     <div class="login-container">
-        @if (!Model.b){
-            <h2>PayTag Card Reader</h2>
-            <form asp-action="Account" asp-controller="Account" method="post">
-            <div class="input-group">
-                <label asp-for="Id">Rfid</label>
-                <input asp-for="Id" placeholder="Tap your Card" required>
-                <span asp-validation-for="Id" class="error-message"></span>
-            </div>
-            <button type="submit" class="login-btn">Enter</button>
-            @if (!string.IsNullOrEmpty(Model.Message))
-            {
-            <p style="color:#000000">@Model.Message</p>
-            }
-        </form>
-        }else{
-            <h2>Card Info</h2>
-            <div style="margin-top: 20px;">
-                <h3 style="color: #000000">Card Number: @Model.Cardnum</h3>
-                <h3 style="color: #000000">Total Amount: @Model.Money</h3>
-                <p>   </p>
-
-                <form method="post">
-                <button class="login-btn" type="submit" disabled>Deposit</button>
-                </form>
-
-                <p>   </p>
-
-                <form method="post">
-                    <button class="login-btn" type="submit" disabled>Withdraw</button>
-                </form>
-            </div>
+        <h2>PayTag Card Reader</h2>
+        <form asp-action="Account" asp-controller="Account" method="post">
+        <div class="input-group">
+            <label asp-for="Id">Rfid</label>
+            <input asp-for="Id" placeholder="Tap your Card" required>
+            <span asp-validation-for="Id" class="error-message"></span>
+        </div>
+        <button type="submit" class="login-btn">Enter</button>
+        @if (!string.IsNullOrEmpty(Model.Message))
+        {
+        <p style="color:#000000">@Model.Message</p>
         }
-        
+        </form>
     </div>
 </body>

@@ -28,7 +28,7 @@ public class LoginModel : PageModel
         if (!System.IO.File.Exists(filePath))
         {
             Message = "User database not found.";
-            return Page();;
+            return Page();
         }
 
         var lines = System.IO.File.ReadAllLines(filePath);
