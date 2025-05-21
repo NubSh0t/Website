@@ -29,11 +29,12 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    color:#000000;
 }
 
 .login-container .login-btn {
     width: 100%;
-    background-color: #2563eb;
+    background-color: #bb9d2b;
     color: white;
     padding: 10px;
     border: none;
@@ -43,14 +44,14 @@
 }
 
 .login-container .login-btn:hover {
-    background-color: #1d4ed8;
+    background-color: #bb9d2b;
 }
 
 .login-container .forgot-password {
     display: block;
     margin-top: 10px;
     font-size: 14px;
-    color: #2563eb;
+    color: #bb9d2b;
     text-decoration: none;
 }
 
@@ -85,4 +86,3 @@
 .container{
     background-color: #000000;
 }
-

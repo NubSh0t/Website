@@ -16,13 +16,14 @@
             <button type="submit" class="login-btn">Enter</button>
             @if (!string.IsNullOrEmpty(Model.Message))
             {
-            <p>@Model.Message</p>
+            <p style="color:#000000">@Model.Message</p>
             }
         </form>
         }else{
             <h2>Card Info</h2>
             <div style="margin-top: 20px;">
-                <h3>Total Amount: $ @Model.Mon</h3>
+                <h3 style="color: #000000">Card Number: @Model.Cardnum</h3>
+                <h3 style="color: #000000">Total Amount: @Model.Money</h3>
                 <p>   </p>
 
                 <form method="post">

@@ -40,8 +40,8 @@ public class LoginModel : PageModel
 
             if (parts.Length < 3) continue;
 
-            var emailPart = parts[1].Trim().Replace("Email: ", "");
-            var passwordPart = parts[2].Trim().Replace("Password: ", "");
+            var emailPart = parts[1].Trim();
+            var passwordPart = parts[2].Trim();
 
             if (Email == emailPart && Password == passwordPart)
             {

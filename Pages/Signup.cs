@@ -38,7 +38,7 @@ public class SignupModel : PageModel
         }
 
 
-        string line = $"FullName: {FullName}, Email: {Email}, Password: {Password}";
+        string line = $"{FullName},{Email},{Password},";
         System.IO.File.AppendAllText(filePath, line + Environment.NewLine);
 
         Message = "Login saved!";

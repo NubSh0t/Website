@@ -12,7 +12,9 @@ public class AccountModel : PageModel
     [BindProperty]
     public string Id { get; set; }="";
     [BindProperty]
-    public string Mon { get; set; }="";
+    public string Cardnum { get; set; }="";
+    [BindProperty]
+    public string Money { get; set; }="";
 
     public bool b=false;
 
@@ -25,7 +27,7 @@ public class AccountModel : PageModel
 
     public void OnPost()
     {
-        b=false;
+        b = false;
         string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "cards.txt");
         string[] lines;
 
@@ -33,7 +35,9 @@ public class AccountModel : PageModel
         {
             Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
             lines = System.IO.File.ReadAllLines(filePath);
-        }else{
+        }
+        else
+        {
             lines = System.IO.File.ReadAllLines(filePath);
         }
 
@@ -45,17 +49,20 @@ public class AccountModel : PageModel
 
             var code = parts[0];
             var money = parts[1];
+            var num = parts[2];
 
-            Mon=money;
+            Money = money;
+            Cardnum=num;
 
-            if (code==Id)
+            if (code == Id)
             {
-                b=true;
+                b = true;
                 return;
             }
         }
 
-        if (b==false){
+        if (b == false)
+        {
             string line = $"{Id},0";
             System.IO.File.AppendAllText(filePath, line + Environment.NewLine);
         }

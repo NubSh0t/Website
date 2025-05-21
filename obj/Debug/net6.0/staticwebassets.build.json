@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "A8T7T6mE1o/T1ko2owsmpW1Lt+lY0e3CSnWHL8yJKH8=",
+  "Hash": "T4TLEw1QMTSCIPostjFBxonQuPg6oRDBA40yUbkBAG4=",
   "Source": "Website",
   "BasePath": "_content/Website",
   "Mode": "Default",
@@ -338,23 +338,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\brand_01.png"
-    },
-    {
-      "Identity": "C:\\Users\\1amma\\GitHub\\Website\\wwwroot\\img\\brand_02.png",
-      "SourceId": "Website",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\1amma\\GitHub\\Website\\wwwroot\\",
-      "BasePath": "_content/Website",
-      "RelativePath": "img/brand_02.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\brand_02.png"
     },
     {
       "Identity": "C:\\Users\\1amma\\GitHub\\Website\\wwwroot\\img\\brand_03.png",

@@ -1,1 +1,1 @@
-FullName: admin, Email: admin@gmail.com, Password: admin123
+admin,admin@gmail.com,admin123
