@@ -32,12 +32,6 @@ public class SignupModel : PageModel
         }
         string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "logins.txt");
 
-        if (!System.IO.File.Exists(filePath))
-        {
-            Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
-        }
-
-
         string line = $"{FullName},{Email},{Password},";
         System.IO.File.AppendAllText(filePath, line + Environment.NewLine);
 

@@ -37,13 +37,11 @@ public class AccountModel : PageModel
 
         if (!System.IO.File.Exists(filePath))
         {
-            Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
-            lines = System.IO.File.ReadAllLines(filePath);
+            string initialContent = "0011543444,100,000011112222333344";
+            System.IO.File.WriteAllText(filePath, initialContent);
         }
-        else
-        {
-            lines = System.IO.File.ReadAllLines(filePath);
-        }
+
+        lines = System.IO.File.ReadAllLines(filePath);
 
 
         foreach (var line in lines)
@@ -61,7 +59,7 @@ public class AccountModel : PageModel
             if (code == Id)
             {
                 b = true;
-                MONEY=money;
+                MONEY = money;
                 ID = Id;
                 CARDNUM = Cardnum;
                 return RedirectToPage("/Account2");

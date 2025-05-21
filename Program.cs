@@ -1,3 +1,22 @@
+using System;
+
+string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "logins.txt");
+
+if (!System.IO.File.Exists(filePath))
+{
+    string initialContent = "admin,admin@gmail.com,admin123";
+    System.IO.File.WriteAllText(filePath, initialContent);
+}
+
+filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "cards.txt");
+
+if (!System.IO.File.Exists(filePath))
+{
+    string initialContent = "0011543444,100,000011112222333344";
+    System.IO.File.WriteAllText(filePath, initialContent);
+}
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
