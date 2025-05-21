@@ -1,5 +1,7 @@
 using System;
 
+Directory.CreateDirectory("/app/Data");
+
 string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "logins.txt");
 
 if (!System.IO.File.Exists(filePath))
