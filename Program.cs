@@ -15,7 +15,7 @@ filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "cards.txt");
 if (!System.IO.File.Exists(filePath))
 {
     string[] initialContent = { "0011543444,10000,000011112222333344","0011494335,30000,001149432517525535" };
-    System.IO.File.WriteAllText(filePath, initialContent);
+    System.IO.File.WriteAllLines(filePath, initialContent);
 }
 
 
