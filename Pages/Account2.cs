@@ -16,6 +16,8 @@ public class AccountModel2 : PageModel
     public string Cardnum { get; set; } = "";
     [BindProperty]
     public string Money { get; set; } = "";
+    [BindProperty]
+    public string Name { get; set; } = "";
 
     public AccountModel2(ILogger<AccountModel2> logger)
     {
@@ -29,6 +31,7 @@ public class AccountModel2 : PageModel
 
     public void OnGet()
     {
+        Name=LoginModel.NAME;
         Id = AccountModel.ID;
         Cardnum = AccountModel.CARDNUM;
         Money = AccountModel.MONEY;

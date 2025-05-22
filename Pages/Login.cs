@@ -8,6 +8,8 @@ namespace Website.Pages;
 
 public class LoginModel : PageModel
 {
+    public static string NAME="";
+
     private readonly ILogger<LoginModel> _logger;
     [BindProperty]
     public string Email { get; set; }="";
@@ -46,6 +48,7 @@ public class LoginModel : PageModel
             if (Email == emailPart && Password == passwordPart)
             {
                 Message = "Login successful!";
+                NAME=parts[0].Trim();
                 return RedirectToPage("/Account");
             }
         }
